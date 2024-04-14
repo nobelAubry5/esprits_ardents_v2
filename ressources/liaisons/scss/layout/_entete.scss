@@ -1,0 +1,38 @@
+/* Entete de page */
+.nav {
+  height: 70px;
+  background: #cbd5e1;
+}
+.nav ul {
+  list-style: none;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  height: 100%;
+}
+.nav ul li {
+  padding: 0 10px;
+  position: relative;
+}
+.nav ul .custom-button {
+  color: red;
+  border: 2px solid #cbd5e1;
+}
+.nav ul li:hover {
+  display: flex;
+  flex-direction: column;
+}
+.nav ul li a:link,
+.nav ul li a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.nav ul li a:hover,
+.nav ul li a:active {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
