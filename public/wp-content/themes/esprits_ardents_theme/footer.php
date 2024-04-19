@@ -1,10 +1,10 @@
 </div>
-    
-    
+<?php wp_footer()?>
     </body>
-    <?php wp_footer()?>
-    <footer class="piedDePage">
-        <div class="footer__container">
+    
+    <div class="piedDePage">
+        <div class="footer__profil">
+    </div>
         <div class="footer__content">
     <?php
         //Requête et boucle d'affichage des articles avec ACF
@@ -17,19 +17,21 @@
         ));
         if(have_posts()){
             foreach ($posts as $post){?>
-            <h3><?php echo get_field("nom_et_prenom");?></h3>
-            <p><?php echo get_field("numero_de_telephone");?></p>
-            <p><?php echo get_field("courriel")?></p>
-            <p><?php echo get_field("adresse")?></p>
+            <div class="footer__titleimg">
+               <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marie-claude.webp" alt="Logo du site" class="nav_container-img"><h2><?php echo get_field("nom_et_prenom");?></h2> 
+            </div>
+            
+            <p><i class="fa-solid fa-phone"></i><?php echo get_field("numero_de_telephone");?></p>
+            <p><i class="fa-solid fa-envelope"></i><?php echo get_field("courriel")?></p>
+            <p><i class="fa-solid fa-location-dot"></i><?php echo get_field("adresse")?></p>
+        
             <?php }
         }?>
         <i class="fa-brands fa-instagram fa-2x" style="padding:0 5px 0 5px"></i>
         <i class="fa-brands fa-facebook fa-2x"  style="padding:0 5px 0 5px"></i>
-        </div>
-        <div class="footer__content">
-        <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marlo_plan.jpg" alt="Plan du parking">
     </div>
-    
-    </div>
-    </footer>
+    <!-- <div class="footer__mapimg">
+    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marlo_plan.jpg" alt="Logo du site" class="nav_container-img">
+    </div> -->
+</div>
 </html>

@@ -50,7 +50,7 @@ echo "page-accueil.php";
                                     <?php the_excerpt();?>
                                 </p>
                             <?php } ?>
-                            <a class="btn__massage">Voir plus</a>
+                            <button class="button-3" role="button">Voir plus</button>
                         </div>
                     </div>
                 </div>
@@ -71,8 +71,6 @@ echo "page-accueil.php";
         ));
         if(have_posts()){
             foreach ($posts as $post){?>
-                <div class="">
-                    <div class="">
                         <div class="testimony__container">
                             <i class="fa-solid fa-quote-left fa-xl"></i>
                             <span class="testimony__text">
@@ -82,8 +80,7 @@ echo "page-accueil.php";
                                 <div class="testimony__name"><?php echo get_field("nom_de_la_personne");?></div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    
             <?php }
         }?>
            

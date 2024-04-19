@@ -41,7 +41,7 @@ echo "page-massages.php";
                                     <?php the_excerpt();?>
                                 </p>
                             <?php } ?>
-                            <a class="btn__massage">Voir plus</a>
+                            <button class="button-3" role="button">Voir plus</button>
                         </div>
                     </div>
                 </div>
