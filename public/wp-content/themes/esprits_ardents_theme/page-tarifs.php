@@ -1,7 +1,7 @@
 <?php
 /*Template name: Tarifs */
 get_header(); //Appel de l'inclusion d'entête de page
-echo "page-tarifs.php";
+echo "page-Tarifs.php";
 ?>
     <main class="page">
         <div>

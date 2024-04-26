@@ -4,22 +4,35 @@
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   margin: 0 auto;
+  max-width: 1080px;
 }
 .testimony__container i {
   font-size: 40px;
   margin: 10px 0;
+  transform: rotate(360deg); /* Adjust the degree value as needed */
 }
 .testimony__container {
-  background-color: #c4ffc6;
+  // background-color: #cddec6;
+  background-color: #cfe7c5;
   border-radius: 10px;
   padding: 15px 20px;
   margin: 10px 0;
 }
 .testimony__text {
   font-family: "Open Sans";
-  font-size: 15px;
-  letter-spacing: 0.01rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
+}
+.p1 {
+  font-size: 15px !important;
+  line-height: 1.5rem !important;
+}
+.p2 {
+  font-size: 15px !important;
+  line-height: 1.5rem !important;
+}
+.testimony__text p {
+  font-size: 15px !important;
+  line-height: 1.5rem !important;
 }
 .testimony__name {
   font-size: 18px;

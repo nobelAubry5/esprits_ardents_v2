@@ -1,26 +1,40 @@
-<?php get_header() ?>
-<main class="page">
-<?php echo "index.php"?>
-<?php //si la page reçoit des articles
-	if(have_posts()){
-		//tant qu'il restera des articles
-		while (have_posts()){
-			//passer à l'article suivant
-			the_post();?>
-			<article class="article">
-				<header class="article__entete">
-					<h2 class="article__titre">
-						<?php //affiche le lien et le titre de l'article'?>
-						<a class="article__lien" href="<?php the_permalink();?>"><?php the_title()?></a>
-					</h2>
-				</header>
-				<p class="article__texte">
-					<?php //affiche le texte de l'article
-						the_content();
-					?>
-				</p>
-			</article>
-	<?php }}
+<?php
+/*Template name: Tarifs */
+get_header(); //Appel de l'inclusion d'entête de page
+echo "page-Tarifs.php";
 ?>
-</main>
-<?php get_footer() ?>
+    <main class="page">
+        <div>
+            <h1>Tarifs</h1>
+        </div>
+        
+
+
+        <div class="table__layout">
+
+            <div class="message__tarifs">
+			Pour tout désistement à 24h et moins, vous devez payer la totalité des  frais de la session pour laquelle vous aviez réservé. Un reçu vous sera émis par la suite. Merci de votre compréhension.
+</div>
+        <table>
+        <?php
+        //Requête et boucle d'affichage des articles avec ACF
+        $posts = get_posts(array(
+            'posts_per_page' => -1,
+            'post_type'	=> 'tarifs',
+            'post_status' => 'publish',
+            'orderby' => 'the_title',
+            'order' => 'ASC',
+        ));
+        if(have_posts()){
+            foreach ($posts as $post){?>
+            <tr>
+            <td><?php echo get_field("temps_massage")?></td>
+            
+            <td><?php echo get_field("prix_massage")?></td>
+        </tr>
+            <?php }
+        }?>
+        </table>
+    </div>
+    </main>
+<?php get_footer()?>

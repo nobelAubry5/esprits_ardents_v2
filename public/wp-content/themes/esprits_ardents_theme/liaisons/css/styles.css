@@ -393,123 +393,34 @@ th {
   margin: 0;
   padding: 0;
   font: 0.8em "Roboto", sans-serif;
-  background-color: #faf9f6; }
+  background-color: #f8fafc; }
 
 .contenu {
-  max-width: 1080px;
   margin: 0 auto; }
 
 .page {
-  float: left;
-  width: 100%; }
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto; }
   @media only screen and (max-width: 735px) {
     .page {
       float: none;
       width: 100%;
       border-bottom: 1px solid #333; } }
 
+.page-herboristerie {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 80%; }
+  @media only screen and (max-width: 735px) {
+    .page-herboristerie {
+      float: none;
+      width: 100%;
+      border-bottom: 1px solid #333; } }
+
 /****** MODULES ******/
 /** entête de page **/
-nav {
-  background-color: #108554;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end; }
-
-.menu-menu-1-container ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-
-.menu-menu-1-container li {
-  list-style: none;
-  font-size: 1em;
-  font-weight: 500;
-  cursor: pointer;
-  margin-right: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-
-.menu-menu-1-container li:hover {
-  color: blue; }
-
-.menu-menu-1-container ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 15px; }
-
-.menu-menu-1-container ul .rdv {
-  background-color: #f2c94c;
-  padding: 1rem 0.5rem; }
-
-.menu-menu-1-container ul .rdv a {
-  color: black; }
-
-#hamburger {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: absolute;
-  top: 54px;
-  right: 20px;
-  z-index: 10; }
-
-#hamburger div {
-  width: 22px;
-  height: 2px;
-  background-color: white;
-  margin: 4px 0;
-  transition: 0.5s; }
-
-#hamburger {
-  display: none; }
-
-@media screen and (max-width: 768px) {
-  nav {
-    display: none; }
-
-  #hamburger {
-    display: block; }
-
-  .menu-menu-1-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-    background-color: #108554;
-    transform: translateX(100%);
-    transition: 0.5s; }
-
-  .menu-menu-1-container ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 15px 0; }
-
-  .menu-menu-1-container li {
-    color: white;
-    padding: 15px 0; } }
-.nav-active {
-  transform: translateX(0); }
-
-#hamburger.toggle div {
-  background-color: white; }
-
-.toggle #bar1 {
-  transform: rotate(-45deg) translate(-5px, 4px); }
-
-.toggle #bar2 {
-  opacity: 0; }
-
-.toggle #bar3 {
-  transform: rotate(45deg) translate(-5px, -4px); }
-
 /*pied de page*/
 .piedDePage {
   display: flex;
@@ -517,7 +428,6 @@ nav {
   justify-content: center;
   background-color: #108554;
   border-top: 1px solid #333;
-  clear: both;
   padding: 40px 0; }
   .piedDePage h2 {
     margin: 0;
@@ -563,28 +473,232 @@ nav {
   .footer__content h2 {
     font-size: 1.5em; } }
 /** article WP **/
+/**
+ * @author Prénom Nom courriel
+ * @todo ADAPTER ce fichier selon le projet
+**/
+/**
+ * TABLE DES MATIÈRES
+ * Palette de couleurs
+ * Base commune
+ * - Bouton du menu
+ * - Liste du menu
+ * - Liens du menu
+ * Si le javascript est activé
+ */
+/****** Base commune *******/
+/* Bouton du menu (injecté par JavaScript)*/
+.navigation {
+  max-width: 960px;
+  margin: 0 auto; }
+  .navigation__controle {
+    background-color: #1c8554;
+    color: white;
+    border: none;
+    padding: 10px;
+    min-width: 40px; }
+    .navigation__controle:focus {
+      /**
+             * Les styles du navigateur utilisent la règle outline pour définir
+             * l'état focus des éléments interactifs.
+             * Vous pouvez redéfinir cette règle ou remplacer par d'autres styles
+             * mieux adaptés à la direction visuelle.
+             * MAIS il faut souligner l'état focus et le tester au clavier.
+             */
+      outline-offset: -5px;
+      outline: auto 5px; }
+    @media (min-width: 601px) {
+      .navigation__controle {
+        display: none;
+        padding-top: 10px; } }
+
+.menu__principal {
+  background-color: #1c8554; }
+
+/* Liens du menu */
+.menu-item a {
+  font-size: 14px;
+  color: white;
+  display: block;
+  padding: 10px 10px;
+  width: 100%;
+  /*     outline: none;
+         border-left: 5px solid #f5ae09;*/ }
+  .menu-item a:link, .menu-item a:visited {
+    text-decoration: none; }
+  .menu-item a:active, .menu-item a:hover {
+    background-color: #f5ae09; }
+  .menu-item a--actif {
+    border-left: 5px solid #f4d07c; }
+  .menu-item a .menu-item:last-child a {
+    background-color: #f5ae09; }
+
+/* Liste du menu */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: none;
+  background-color: #1c8554; }
+
+@media (min-width: 601px) {
+  .menu {
+    padding-top: 30px;
+    padding-bottom: 15px; } }
+@media (min-width: 601px) {
+  .menu-item {
+    display: inline-block; } }
+
+/* Si le javascript est activé */
+/* Pour des raisons d'accessibilité, on ne cache le menu mobile
+ * que si JavaScript est activé. De cette façon, s'il est désactivé,
+ * le menu restera tout de même visible à l'utilisateur.
+ */
+.js .menu {
+  max-height: 100vh;
+  overflow: hidden;
+  transition: max-height 0.5s; }
+
+.js .navigation--ferme .menu {
+  max-height: 0; }
+  @media (min-width: 601px) {
+    .js .navigation--ferme .menu {
+      max-height: none; } }
+
+/** article WP **/
+.hero-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.background-image {
+  width: 100% !important;
+  display: block; }
+
+.overlay-content {
+  position: absolute;
+  top: 41%;
+  left: 4%;
+  /* Adjust as needed */
+  transform: translateY(-50%);
+  text-align: left;
+  color: white;
+  /* Assuming white text for better readability */
+  width: 46%;
+  /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 28px;
+  border-radius: 10px; }
+
+.overlay-content h1,
+.overlay-content h2,
+.overlay-content h3 {
+  margin: 0;
+  margin-bottom: 10px; }
+
+.overlay-content h3 {
+  line-height: 1.5rem; }
+
+button {
+  background-color: #f2c94c;
+  /* Assuming blue for button background */
+  color: black;
+  /* Assuming white text for button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; }
+
+button:hover {
+  background-color: #f2c94c;
+  /* Darker shade of blue on hover */ }
+
+.foreground-image {
+  position: absolute;
+  top: 80px;
+  right: 70px;
+  width: 500px;
+  /* Adjust as needed */
+  height: 300px;
+  /* Adjust as needed */
+  border-radius: 10px; }
+
+@media (max-width: 600px) {
+  .overlay-content {
+    position: static;
+    transform: none;
+    width: 100%;
+    background: none;
+    color: black; }
+
+  .foreground-image {
+    position: absolute;
+    top: 5px;
+    right: 70px;
+    width: 270px;
+    /* Adjust as needed */
+    height: 150px;
+    /* Adjust as needed */ } }
+.card__container-accueil {
+  margin-bottom: 50px; }
+
+.card__layout_accueil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1080px; }
+
+.card__layout_accueil-title {
+  text-align: center; }
+
+@media (max-width: 600px) {
+  .card__layout_accueil {
+    display: flex;
+    flex-direction: column;
+    /* Change to column */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; } }
+/** article WP **/
 .layout__temoignages {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1080px; }
 
 .testimony__container i {
   font-size: 40px;
-  margin: 10px 0; }
+  margin: 10px 0;
+  transform: rotate(360deg);
+  /* Adjust the degree value as needed */ }
 
 .testimony__container {
-  background-color: #c4ffc6;
+  background-color: #cfe7c5;
   border-radius: 10px;
   padding: 15px 20px;
   margin: 10px 0; }
 
 .testimony__text {
   font-family: "Open Sans";
-  font-size: 15px;
-  letter-spacing: 0.01rem;
-  line-height: 1.5; }
+  font-size: 1.5rem; }
+
+.p1 {
+  font-size: 15px !important;
+  line-height: 1.5rem !important; }
+
+.p2 {
+  font-size: 15px !important;
+  line-height: 1.5rem !important; }
+
+.testimony__text p {
+  font-size: 15px !important;
+  line-height: 1.5rem !important; }
 
 .testimony__name {
   font-size: 18px;
@@ -597,6 +711,17 @@ nav {
   .layout__temoignages {
     margin: 0 20px; } }
 /** article WP **/
+.hero-container-massages {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.background-image-massages {
+  width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block; }
+
 .article {
   border-bottom: 1px dotted #333;
   padding-right: 8px;
@@ -618,6 +743,9 @@ nav {
   padding-right: 10px;
   background-color: white;
   border-radius: 0.5rem;
+  border: 1px solid #cbd5e1; }
+
+.card__massage:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
 
 .card__img {
@@ -719,7 +847,7 @@ nav {
   border-radius: 10px; }
 
 .message__tarifs p {
-  font-size: 1em; }
+  font-size: 15px; }
 
 table {
   border-collapse: collapse;
@@ -768,7 +896,7 @@ tr:nth-child(even) {
 
 .profil__text p {
   font-size: 15px;
-  letter-spacing: 0.04rem; }
+  line-height: 1.5rem; }
 
 .profil__layout-experience-formation {
   display: flex;
@@ -806,27 +934,125 @@ tr:nth-child(even) {
   .profil__text {
     text-align: center;
     margin: 0 0; } }
-/** single Massage **/
-.title__single {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  background: transparent;
-  color: black;
-  font-weight: bold;
-  margin: 0;
-  padding: 0; }
+.article__layout {
+  max-width: 800px;
+  /* Adjust maximum width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  /* Add padding for spacing */ }
 
-.single__container {
+.article__layout h2 {
+  margin-bottom: 10px;
+  /* Add margin below heading for spacing */ }
+
+.article__layout p {
+  /* Add margin below paragraph for spacing */
+  font-size: 15px;
+  line-height: 1.5rem; }
+
+.pagination {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; }
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Add margin on top of pagination */ }
 
-.single__container div {
-  margin: 0 10px 0 10px; }
+.pagination-item {
+  margin: 0 5px;
+  /* Add margin between pagination items */ }
+
+.pagination-item a {
+  background-color: #f2c94c;
+  /* Theme color */
+  color: #fff;
+  /* Text color */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  text-decoration: none;
+  border-radius: 5px;
+  /* Add border radius for rounded corners */ }
+
+.pagination a:first-child {
+  background-color: green; }
+
+.pagination-item a:hover {
+  background-color: #f5ae09;
+  /* Hover color */ }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .pagination {
+    flex-wrap: wrap; }
+
+  .pagination-item {
+    margin: 5px;
+    /* Adjust margin for smaller screens */ } }
+/** single Massage **/
+/* Desktop Layout */
+.single__container {
+  display: flex; }
+
+.single__container > div {
+  line-height: 2rem;
+  /* Adjust spacing as needed */ }
+
+.container__single-text {
+  padding-left: 28px;
+  width: 50%;
+  font-size: 14px; }
 
 .single__texte {
-  width: 70%; }
+  text-align: left;
+  /* Adjust text alignment as needed */ }
 
+/* Mobile Layout */
+@media (max-width: 600px) {
+  .single__container {
+    flex-direction: column; }
+
+  .single__container > div:first-child {
+    margin-bottom: 20px;
+    /* Adjust spacing as needed */ } }
+/** single Massage **/
+.blog-article {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  /* Add a border to separate articles */
+  background-color: #fff;
+  /* Background color for the article */
+  padding: 20px;
+  /* Add padding for spacing */
+  border-radius: 5px;
+  /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add shadow for depth */ }
+
+.article-header {
+  margin-bottom: 20px; }
+
+.article__title {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+  /* Title color */ }
+
+.article__meta {
+  font-style: italic;
+  color: #666; }
+
+.article__meta .article-date {
+  margin-right: 10px; }
+
+.article__description {
+  line-height: 1.6;
+  color: #555;
+  /* Text color */ }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .article__title {
+    font-size: 20px;
+    /* Adjust font size for smaller screens */ } }
 /** barres latérales  optionnelles**/
 
 /*# sourceMappingURL=styles.css.map */

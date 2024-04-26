@@ -1,25 +1,37 @@
 <?php
 /*Template name: Accueil */
-get_header(); //Appel de l'inclusion d'entête de page
-echo "page-accueil.php";
+// get_header(); //Appel de l'inclusion d'entête de page
+// echo "page-accueil.php";
 ?>
-
+<div class="hero-container">
+    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/hero_img.jpg" alt="Background Image" class="background-image"> 
+    <div class="overlay-content">
+        <h1>Les Esprits Ardents</h1>
+        <h2>Dites Oui à la vie</h2>
+        <h3>Faites peau neuve avec une session en massothérapie! Participez activement à votre équilibre!</h3>
+        <button>Prendre un rendez-vous</button>
+    </div>
+    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/hero_massage.jpg" alt="Foreground Image" class="foreground-image"> 
+</div>
     <main class="page">
 
         <?php //var_dump($post); //Ce que reçoit la page?>
 
-        <div>
-            <h2><?php the_title() //fonction native WP?></h2>
-            <h2><?php //echo $post->post_title  //Façon alternative en utilisant la variable $post?></h2>
-        </div>
+        
+
+</div>
+
+
         <div>
         <p>
            <?php  the_content() ?>
            <?php  //echo $post->post_content; ?>
         </p>
         </div>
-
-        <div class="card__layout">
+<div class="card__container-accueil">
+    <h1 class="card__layout_accueil-title">Nos massages</h1>
+        <div class="card__layout_accueil">
+            
         <?php
         //Requête et boucle d'affichage des articles avec ACF
         $posts = get_posts(array(
@@ -57,9 +69,10 @@ echo "page-accueil.php";
             <?php }
         }?>
         </div>
-
+</div>
+<h1 class="card__layout_accueil-title">Témoignages</h1>
         <div class="layout__temoignages">
-            
+        
         <?php
         //Requête et boucle d'affichage des articles avec ACF
         $posts = get_posts(array(

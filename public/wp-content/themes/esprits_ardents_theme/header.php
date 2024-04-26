@@ -16,47 +16,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/28d2ca6b82.js" crossorigin="anonymous"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/liaisons/js/menuwp.js"></script>
     <?php wp_head()?>
 </head>
-<nav>
+<!-- <nav> -->
   <!-- <img src="<?php echo get_template_directory_uri()?>/liaisons/images/logo.svg" alt="Logo du site" class="nav_container-img"> -->
-  <div id="hamburger">
+  <!-- <div id="hamburger">
     <div id="bar1"></div>
     <div id="bar2"></div>
     <div id="bar3"></div>
-  </div>
-  <?php if(has_nav_menu('principal')){?>
+  </div> -->
+
+
         <?php if(has_nav_menu("principal")){ ?>
+          <nav id="principal" class="menu__principal">
             <?php wp_nav_menu(array("theme_location"=>"principal"));?>
+          </nav>
         <?php } ?>
 
-<?php } ?>
-  </nav>
-  <script>
-    var hamburger = document.querySelector("#hamburger");
-var nav = document.querySelector(".menu-menu-1-container");
-var navLinks = document.querySelectorAll(".menu-menu-1-container li");
 
-// close nav by clicking on list items
-Array.from(navLinks).forEach((li) =>
-  li.addEventListener("click", () => {
-    if (hamburger.classList.contains("toggle")) {
-      hamburger.classList.remove("toggle");
-    }
-    if (nav.classList.contains("nav-active")) {
-      nav.classList.remove("nav-active");
-    }
-  })
-);
-
-// toggle nav on click of hamburger menu icon
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("nav-active");
-
-  // burger animation
-  hamburger.classList.toggle("toggle");
-});
-  </script>
+  <!-- </nav> -->
+  
 <body class="layout__body">
   
   

@@ -1,6 +1,6 @@
 </div>
 <?php wp_footer()?>
-    </body>
+   
     
     <div class="piedDePage">
         <div class="footer__profil">
@@ -34,4 +34,5 @@
     <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marlo_plan.jpg" alt="Logo du site" class="nav_container-img">
     </div> -->
 </div>
+ </body>
 </html>

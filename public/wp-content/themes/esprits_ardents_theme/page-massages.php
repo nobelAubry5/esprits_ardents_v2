@@ -1,8 +1,11 @@
 <?php
 /*Template name: Massages */
 get_header(); //Appel de l'inclusion d'entête de page
-echo "page-massages.php";
+// echo "page-massages.php";
 ?>
+<!-- <div class="hero-container-massages">
+    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/hero_massage.jpg" alt="Background Image" class="background-image-massages"> 
+</div> -->
     <main class="page">
         <div>
             <h1><?php the_title()?></h1>

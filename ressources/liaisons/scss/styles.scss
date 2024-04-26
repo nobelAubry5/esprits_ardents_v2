@@ -61,6 +61,10 @@
 // /** pied de page **/
 @import "layout/piedpage";
 /** article WP **/
+@import "modules/menuwp";
+/** article WP **/
+@import "modules/accueil";
+/** article WP **/
 @import "modules/article-temoignages";
 /** article WP **/
 @import "modules/article-massage";
@@ -70,6 +74,8 @@
 @import "modules/article_profil";
 /** single Massage **/
 @import "modules/single-massage";
+/** single Massage **/
+@import "modules/single-article";
 /** barres latérales  optionnelles**/
 //@import 'modules/barredroite';
 //@import 'modules/barregauche';

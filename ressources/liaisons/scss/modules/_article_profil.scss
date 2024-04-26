@@ -26,7 +26,8 @@
 }
 .profil__text p {
   font-size: 15px;
-  letter-spacing: 0.04rem;
+
+  line-height: 1.5rem;
 }
 .profil__layout-experience-formation {
   display: flex;
@@ -44,6 +45,7 @@
 .profil__layout-formation ul li {
   font-size: 15px;
 }
+
 @media (max-width: 800px) {
   .profil__layout-experience-formation {
     display: flex;
@@ -66,5 +68,56 @@
   .profil__text {
     text-align: center;
     margin: 0 0;
+  }
+}
+.article__layout {
+  max-width: 800px; /* Adjust maximum width as needed */
+  margin: 0 auto;
+  padding: 20px; /* Add padding for spacing */
+}
+
+.article__layout h2 {
+  margin-bottom: 10px; /* Add margin below heading for spacing */
+}
+
+.article__layout p {
+  /* Add margin below paragraph for spacing */
+  font-size: 15px;
+  line-height: 1.5rem;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add margin on top of pagination */
+}
+
+.pagination-item {
+  margin: 0 5px; /* Add margin between pagination items */
+}
+
+.pagination-item a {
+  background-color: #f2c94c; /* Theme color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-decoration: none;
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+.pagination a:first-child {
+  background-color: green;
+}
+
+.pagination-item a:hover {
+  background-color: #f5ae09; /* Hover color */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .pagination-item {
+    margin: 5px; /* Adjust margin for smaller screens */
   }
 }

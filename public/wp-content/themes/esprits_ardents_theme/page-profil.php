@@ -3,7 +3,7 @@
 get_header(); //Appel de l'inclusion d'entête de page
 echo "page-profil.php";
 ?>
-<main>
+<main class="page">
     <div class="profil__layout">
         <div class="profil__img">
             <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marie-claude.webp" alt="Logo du site" class="nav_container-img"> 
@@ -19,19 +19,35 @@ echo "page-profil.php";
             </p>    
         </div>
     </div>
+    <h1 class="card__layout_accueil-title">Témoignages</h1>
+        <div class="article__layout">
+        
+        <?php
+        //Requête et boucle d'affichage des articles avec ACF
+        $posts = get_posts(array(
+            'posts_per_page' => -1,
+            'post_type'	=> 'articles',
+            'post_status' => 'publish',
+            'orderby' => 'the_title',
+            'order' => 'ASC',
+        ));
+        if(have_posts()){
+            foreach ($posts as $post){?>
+                       <h2><a href="<?php echo $post-> guid;?>"><?php echo $post-> post_title;?></a></h2>
+                                    <p><?php echo get_field("extrait_article");?></p>
+                                    <button class="button-3">Lire plus</button>
+                                    <hr>
+            <?php }
+        }?>
+           
+        </div>
     
-    <div class="article__layout" style="margin-bottom: 60px;">
-        <h2>Le massage, c'est un accompagnement.</h2>
-        <p>Un art,certainement.
-            Une voc ation ,peut-être.
-            Un accompagnement de mieux-être, assurément.
-            Dans un monde en constante mouvance bien serrés contre nos technologies ,
-            avides de distractions ,nous délaissons parfois la présence et se gardons bien  
-            de tout contact parce qu'être touché nous engage, nous implique...
-        </p>
-        <button>Lire plus</button>
-        <hr>
-    </div>
+    <div class="pagination">
+    <div class="pagination-item"><a href="#">1</a></div>
+    <div class="pagination-item"><a href="#">2</a></div>
+    <div class="pagination-item"><a href="#">3</a></div>
+    <!-- Add more pagination items as needed -->
+</div>
 </main>
 
 <?php get_footer()?>
