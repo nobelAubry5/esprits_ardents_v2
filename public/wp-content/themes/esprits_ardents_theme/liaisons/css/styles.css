@@ -584,9 +584,8 @@ th {
   text-align: left;
   color: white;
   /* Assuming white text for better readability */
-  width: 46%;
+  width: 40%;
   /* Adjust as needed */
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 28px;
   border-radius: 10px; }
 
@@ -596,7 +595,14 @@ th {
   margin: 0;
   margin-bottom: 10px; }
 
+.overlay-content h1 {
+  font-size: 45px; }
+
+.overlay-content h2 {
+  font-size: 30px; }
+
 .overlay-content h3 {
+  font-size: 20px;
   line-height: 1.5rem; }
 
 button {
@@ -619,9 +625,9 @@ button:hover {
   position: absolute;
   top: 80px;
   right: 70px;
-  width: 500px;
+  width: 700px;
   /* Adjust as needed */
-  height: 300px;
+  height: 450px;
   /* Adjust as needed */
   border-radius: 10px; }
 
@@ -1031,7 +1037,7 @@ tr:nth-child(even) {
   margin-bottom: 20px; }
 
 .article__title {
-  font-size: 24px;
+  font-size: 34px;
   margin: 0;
   color: #333;
   /* Title color */ }
@@ -1045,6 +1051,7 @@ tr:nth-child(even) {
 
 .article__description {
   line-height: 1.6;
+  font-size: 16px;
   color: #555;
   /* Text color */ }
 

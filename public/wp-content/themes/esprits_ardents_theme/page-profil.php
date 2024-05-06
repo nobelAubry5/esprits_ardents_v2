@@ -19,7 +19,7 @@ echo "page-profil.php";
             </p>    
         </div>
     </div>
-    <h1 class="card__layout_accueil-title">Témoignages</h1>
+    <h1 class="card__layout_accueil-title">Articles</h1>
         <div class="article__layout">
         
         <?php
