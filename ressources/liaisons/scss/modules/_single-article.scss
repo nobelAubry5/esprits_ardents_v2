@@ -1,39 +1,86 @@
-.blog-article {
-  margin-bottom: 40px;
-  border-bottom: 1px solid #ccc; /* Add a border to separate articles */
-  background-color: #fff; /* Background color for the article */
-  padding: 20px; /* Add padding for spacing */
-  border-radius: 5px; /* Add rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+/* Variables */
+:root {
+  --body: #252830;
+  --whiteSmoke: #f4f4f4;
+  --grey: #808080;
 }
 
-.article-header {
-  margin-bottom: 20px;
+/* Container styles */
+.container-fluid {
+  width: 100%;
+  margin: 0 auto; /* Center the container horizontally */
 }
 
-.article__title {
-  font-size: 24px;
-  margin: 0;
-  color: #333; /* Title color */
+/* Blog card styles */
+.blog-card {
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+  height: auto; /* Adjust height as needed */
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: hidden;
 }
 
-.article__meta {
-  font-style: italic;
-  color: #666;
+/* Media styles */
+.media {
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  display: block;
+  object-fit: cover; /* Ensure the image covers the container */
 }
 
-.article__meta .article-date {
-  margin-right: 10px;
+/* Card body styles */
+.card-body {
+  color: var(--grey);
+  padding: 30px 20px 50px;
 }
 
-.article__description {
-  line-height: 1.6;
-  color: #555; /* Text color */
+/* Tagline styles */
+.tagline {
+  font-size: 8px;
+  text-transform: uppercase;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .article__title {
-    font-size: 20px; /* Adjust font size for smaller screens */
-  }
+/* Title styles */
+.title {
+  color: var(--body);
+  font-family: "Playfair Display SC";
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* Divider styles */
+.divider {
+  background: var(--grey);
+  height: 2px;
+  margin: 25px auto;
+  width: 40px;
+}
+
+/* Paragraph styles */
+.paragraph p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Read more link styles */
+.read-more {
+  bottom: 25px;
+  color: var(--grey);
+  cursor: pointer;
+  left: 50%;
+  padding: 5px;
+  position: absolute;
+  text-decoration: none;
+  top: auto;
+  transform: translateX(-50%);
+}
+
+/* Hover effect for read more link */
+.read-more:hover,
+.read-more:focus,
+.read-more:visited {
+  color: var(--body);
+  text-decoration: none;
 }

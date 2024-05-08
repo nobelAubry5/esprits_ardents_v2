@@ -9,13 +9,16 @@ echo "page-Tarifs.php";
         </div>
         
 
+        <div role="alert" class="rounded border-s-4 border-green-500 bg-greeb-50 p-4">
+  <strong class="block font-medium text-green-800"> <?php  the_content() ?> </strong>
 
-        <div class="table__layout">
-
-            <div class="message__tarifs">
-           <?php  the_content() ?>
+  <p class="mt-2 text-sm text-green-700">
+  <?php  the_content() ?>
+  </p>
 </div>
-        <table>
+       
+           
+
         <?php
         //Requête et boucle d'affichage des articles avec ACF
         $posts = get_posts(array(

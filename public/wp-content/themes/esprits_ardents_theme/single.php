@@ -1,32 +1,31 @@
 <?php
 get_header();
-echo "single.php";
+echo "single-herboristerie.php";
 ?>
+<main class="mx-auto max-w-xs md:max-w-lg lg:max-w-5xl xl:max-w-6xl">
+<section class="container__herboristerie">
+    <div class="container__title-herboristerie">
+        <h1><?php the_title() ?></h1>
+    </div>
+    <div class="container__content-img">
+        <div class="container__content-herboristerie">
+            <p><?php echo get_field("description_du_produit")?></p>
+        </div>
+        <div class="container__img-container">
+            <?php $image_info=get_field("image_du_produit");
+                if($image_info!=null){?>
+                    <picture>
+                        <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
+                        <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
+                        <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
+                    </picture>
+            <?php }?>
+        </div>
+    </div>
+</section>
 
-<main class="page">
-
-<?php the_post();?>
-    <article class="article">
-        <header class="article__entete">
-            <h2 class="article__titre"><?php the_title() ?></h2>
-        </header>
-	
-	   <?php  //remplacer cette balise pas le code de l'étape 3 ici! ?>
-
-        <p class="article__texte">
-            <?php  the_content() ?>
-        </p>
-        <?php if(has_post_thumbnail()){ ?>
-			<div class="article__imageUne">
-				<?php the_post_thumbnail("medium");?>
-			</div>
-		<?php } ?>
-        <footer class="article__piedPage">
-            <h4>Par: <?php the_author(); ?></h4>
-            <h4>  Publié le: <?php the_date(); ?></h4>
-        </footer>
-    </article>
-
+    
+        
 </main>
 
 <?php get_footer()?>

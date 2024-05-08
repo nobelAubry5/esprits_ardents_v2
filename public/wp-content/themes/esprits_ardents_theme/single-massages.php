@@ -2,7 +2,7 @@
 get_header();
 echo "single-massages.php";
 ?>
-<main class="page">
+<main class="mx-auto max-w-xs md:max-w-lg lg:max-w-5xl xl:max-w-6xl">
     <h2 class="title__single"><?php the_title() ?></h2>
     <?php the_post();?>
     <div class="single__container">

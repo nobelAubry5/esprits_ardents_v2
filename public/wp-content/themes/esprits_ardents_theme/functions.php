@@ -1,3 +1,13 @@
+
+<?php 
+/**
+ * Enqueue scripts and styles.
+ */
+function cg_your_theme_scripts() {
+	wp_enqueue_style( 'output', get_template_directory_uri() . '/dist/output.css', array() );
+}
+add_action( 'wp_enqueue_scripts', 'cg_your_theme_scripts' );
+?>
 <?php
 /* Ajout d'un emplacement de menu */
 if (function_exists('register_nav_menus')){
@@ -149,6 +159,50 @@ function agence_massages_custom_post() {
 }
 
 add_action( 'init', 'agence_massages_custom_post', 0 );
+?>
+<?php
+//Déclaration des massages
+function agence_herboristeries_custom_post() {
+
+    //On rentre les différentes dénominations de notre article personnalisé type
+    //qui seront affichées dans l'interface administrative...
+    $labels = array(
+        // Le nom au pluriel
+        'name'                => _x( 'Herboristeries', 'Post Type General Name'),
+        // Le nom au singulier
+        'singular_name'       => _x( 'Herboristeries', 'Post Type Singular Name'),
+        // Le libellé affiché dans le menu
+        'menu_name'           => __( 'Herboristerie'),
+        //Les différents libellés de l'interface administrative
+        'all_items'           => __( 'Tous nos produits de herboristerie'),
+        'view_item'           => __( 'Voir nos produits de herboristerie'),
+        'add_new_item'        => __( 'Ajouter un produit de herboristerie'),
+        'add_new'             => __( 'Ajouter'),
+        'edit_item'           => __( 'Editer un produit de herboristerie'),
+        'update_item'         => __( 'Modifier un produit de herboristerie'),
+        'search_items'        => __( 'Rechercher un produit de herboristerie'),
+        'not_found'           => __( 'Non trouvé'),
+        'not_found_in_trash'  => __( 'Non trouvé dans la corbeille')
+    );
+
+    //On peut définir ici d'autres options pour notre type d'article personnalisé
+    $args = array(
+        'label'               => __( 'Nos produits de herboristerie'),
+        'description'         => __( 'Tous sur nos produits de herboristerie'),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'excerpt', 'author', 'thumbnail',
+            'comments', 'revisions', 'custom-fields'),
+        'hierarchical'        => false,
+        'public'              => true,
+        'has_archive'         => true,
+        'rewrite'			  => array( 'slug' => 'herboristeries')
+    );
+
+    // On enregistre notre type d'article personnalisé qu'on nomme ici "massages" et ses arguments
+    register_post_type( 'herboristeries', $args );
+}
+
+add_action( 'init', 'agence_herboristeries_custom_post', 0 );
 ?>
 
 <?php
