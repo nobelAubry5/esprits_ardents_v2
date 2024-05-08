@@ -87,7 +87,7 @@ get_header(); // Appel de l'inclusion d'entête de page
         ));
         if (have_posts()) {
             foreach ($posts as $post) { ?>
- <div class="relative mx-auto mt-8 rounded-lg shadow max-w-lg p-10 bg-[#D2DDCD] opacity-90  leading-snug flex flex-col justify-between">
+ <div class="relative mx-auto mt-8 rounded-lg shadow max-w-lg p-10 bg-[#e2e8f0] opacity-90  leading-snug flex flex-col justify-between">
           <div class="-ml-4">
             <svg class="w-8 opacity-25 text-green-700" xmlns="http://www.w3.org/2000/svg"
               shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"

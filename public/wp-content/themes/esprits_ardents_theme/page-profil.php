@@ -45,7 +45,7 @@ echo "page-profil.php";
         ));
         if (have_posts()) {
             foreach ($posts as $post) { ?>
-                <article class="flex bg-white transition hover:shadow-xl">
+                <article class="flex bg-white transition">
                     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
                         <time
                             datetime="2022-10-10"
