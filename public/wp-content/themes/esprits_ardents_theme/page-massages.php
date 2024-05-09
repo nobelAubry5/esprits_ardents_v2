@@ -9,7 +9,7 @@ get_header(); // Appel de l'inclusion d'entête de page
 </div> -->
 <div class="relative overflow-hidden mb-12">
   <div class=" inset-0">
-    <img src="https://placehold.co/1440x1000" alt="Background Image" class="object-cover object-center w-full h-2/5" />
+    <img src="https://placehold.co/1440x500" alt="Background Image" class="object-cover object-center w-full h-2/5" />
     <div class="absolute inset-0 bg-black opacity-10"></div>
   </div>
 </div>

@@ -1,11 +1,11 @@
 <?php get_header();
 echo "404.php" ?>
 
-<main class="page" >
 
-    <h2>Oups! La page demandée n'existe pas!</h2>
-
-    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/point_exclamation.png" alt="Point d'exclamation">
+<div class="grid h-screen place-content-center bg-white px-4">
+  <h1 class="uppercase tracking-widest text-gray-500">404 | Oups! La page demandée n'existe pas!</h1>
+</div>
+   
 
 </main>
 

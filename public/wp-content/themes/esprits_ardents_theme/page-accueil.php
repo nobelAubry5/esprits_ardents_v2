@@ -16,21 +16,7 @@ get_header(); // Appel de l'inclusion d'entête de page
     <a href="https://site.booxi.com/marieclaudeormassotherapeute" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Prendre rendez-vous</a>
   </div>
 </div>
-
-
-<!-- <div class="hero-container">
-    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/hero_img.jpg" alt="Background Image" class="background-image"> 
-    <div class="overlay-content">
-        <h1>Les Esprits Ardents</h1>
-        <h2>Dites Oui à la vie</h2>
-        <h3>Faites peau neuve avec une session en massothérapie! Participez activement à votre équilibre!</h3>
-        <button><a href="https://site.booxi.com/marieclaudeormassotherapeute">Prendre un rendez-vous</a></button>
-    </div>
-    <!-- <img src="<?php echo get_template_directory_uri()?>/liaisons/images/hero_massage.jpg" alt="Foreground Image" class="foreground-image">  -->
-<!-- </div> --> 
-
 <main class="mx-auto max-w-xs md:max-w-lg lg:max-w-5xl xl:max-w-6xl">
-
     <?php //var_dump($post); //Ce que reçoit la page?>
     <span class="flex items-center my-12">
         <span class="pr-6 text-2xl font-extrabold font-sans">Nos massages</span>
