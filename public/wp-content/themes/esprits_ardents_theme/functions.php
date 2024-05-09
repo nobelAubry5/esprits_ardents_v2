@@ -294,3 +294,93 @@ function agence_infos_custom_post() {
 
 add_action( 'init', 'agence_infos_custom_post', 0 );
 ?>
+
+<?php
+//Déclaration des témoignages
+function agence_formation_custom_post() {
+
+    //On rentre les différentes dénominations de notre article personnalisé type
+    //qui seront affichées dans l'interface administrative...
+    $labels = array(
+        // Le nom au pluriel
+        'name'                => _x( 'Formations', 'Post Type General Name'),
+        // Le nom au singulier
+        'singular_name'       => _x( 'Formations', 'Post Type Singular Name'),
+        // Le libellé affiché dans le menu
+        'menu_name'           => __( 'Formations'),
+        //Les différents libellés de l'interface administrative
+        'all_items'           => __( 'Toutes mes formations'),
+        'view_item'           => __( 'Voir mes formations'),
+        'add_new_item'        => __( 'Ajouter une nouvelle formation'),
+        'add_new'             => __( 'Ajouter'),
+        'edit_item'           => __( 'Editer une formation'),
+        'update_item'         => __( 'Modifier une formation'),
+        'search_items'        => __( 'Rechercher une formation'),
+        'not_found'           => __( 'Non trouvé'),
+        'not_found_in_trash'  => __( 'Non trouvé dans la corbeille')
+    );
+
+    //On peut définir ici d'autres options pour notre type d'article personnalisé
+    $args = array(
+        'label'               => __( 'Mes formations'),
+        'description'         => __( 'Tous sur mes formations'),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'excerpt', 'author', 'thumbnail',
+            'comments', 'revisions', 'custom-fields'),
+        'hierarchical'        => false,
+        'public'              => true,
+        'has_archive'         => true,
+        'rewrite'			  => array( 'slug' => 'formations')
+    );
+
+    // On enregistre notre type d'article personnalisé qu'on nomme ici "massages" et ses arguments
+    register_post_type( 'formations', $args );
+}
+
+add_action( 'init', 'agence_formation_custom_post', 0 );
+?>
+
+<?php
+//Déclaration des témoignages
+function agence_experience_custom_post() {
+
+    //On rentre les différentes dénominations de notre article personnalisé type
+    //qui seront affichées dans l'interface administrative...
+    $labels = array(
+        // Le nom au pluriel
+        'name'                => _x( 'Experiences', 'Post Type General Name'),
+        // Le nom au singulier
+        'singular_name'       => _x( 'Experiences', 'Post Type Singular Name'),
+        // Le libellé affiché dans le menu
+        'menu_name'           => __( 'Experiences'),
+        //Les différents libellés de l'interface administrative
+        'all_items'           => __( 'Toutes mes experiences'),
+        'view_item'           => __( 'Voir mes experiences'),
+        'add_new_item'        => __( 'Ajouter une nouvelle experience'),
+        'add_new'             => __( 'Ajouter'),
+        'edit_item'           => __( 'Editer une experience'),
+        'update_item'         => __( 'Modifier une experience'),
+        'search_items'        => __( 'Rechercher une experience'),
+        'not_found'           => __( 'Non trouvé'),
+        'not_found_in_trash'  => __( 'Non trouvé dans la corbeille')
+    );
+
+    //On peut définir ici d'autres options pour notre type d'article personnalisé
+    $args = array(
+        'label'               => __( 'Mes experiences'),
+        'description'         => __( 'Tous sur mes experiences'),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'excerpt', 'author', 'thumbnail',
+            'comments', 'revisions', 'custom-fields'),
+        'hierarchical'        => false,
+        'public'              => true,
+        'has_archive'         => true,
+        'rewrite'			  => array( 'slug' => 'experiences')
+    );
+
+    // On enregistre notre type d'article personnalisé qu'on nomme ici "massages" et ses arguments
+    register_post_type( 'experiences', $args );
+}
+
+add_action( 'init', 'agence_experience_custom_post', 0 );
+?>
