@@ -294,10 +294,3 @@ function agence_infos_custom_post() {
 
 add_action( 'init', 'agence_infos_custom_post', 0 );
 ?>
-<?php
-function my_acf_google_map_api( $api ){
-    $api['key'] = 'AIzaSyBJzM29dtfvRgsAcXssZFBWfH82bAbb-ZE';
-    return $api;
-}
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-?>
