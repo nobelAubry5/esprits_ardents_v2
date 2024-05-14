@@ -5,7 +5,7 @@ get_header(); //Appel de l'inclusion d'entête de page
 ?>
 <div class="relative overflow-hidden mb-12">
   <div class=" inset-0">
-    <img src="https://placehold.co/1440x1000" alt="Background Image" class="object-cover object-center w-full h-2/5" />
+    <img src="<?php echo get_template_directory_uri()?>/liaisons/images/hero_herboristerie.png" alt="Background Image" class="object-cover object-center w-full h-2/5" />
     <div class="absolute inset-0 bg-black opacity-10"></div>
   </div>
 </div>
@@ -41,7 +41,7 @@ get_header(); //Appel de l'inclusion d'entête de page
                         </picture>
                     <?php } ?>
 
-                    <h3 class="mt-4 font-semibold text-gray-900 text-lg"><?php echo $post->post_title; ?></h3>
+                    <h3 class="mt-4 font-semibold text-gray-900 text-sm lg:text-lg"><?php echo $post->post_title; ?></h3>
 </a>
                 </div>
         <?php }

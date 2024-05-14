@@ -40,13 +40,13 @@ echo "single-massages.php";
   <div class="rounded-lg"><?php 
   $image_info = get_field("image_massage");
   if($image_info != null) {?>
-    <picture>
+    <picture class="flex justify-center items-center">
       <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
       <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
       <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
     </picture>
   <?php }?></div>
-  <div class="rounded-lg bg-gray-200 lg:col-span-2"><?php echo get_field("description_massage") ?> </div>
+  <div class="text-sm p-3 rounded-lg bg-gray-200 lg:col-span-2 lg:text-base"><?php echo get_field("description_massage") ?> </div>
 </div>
 
 <span class="my-4 flex items-center">

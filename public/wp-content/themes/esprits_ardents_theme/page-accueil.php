@@ -9,8 +9,8 @@ get_header(); // Appel de l'inclusion d'entête de page
     <div class="absolute inset-0 bg-black opacity-10"></div>
   </div>
   
-  <div class="ml-24 max-w-xl relative z-10 flex flex-col justify-center items-start h-4/6 text-start">
-    <h1 class="text-5xl font-bold leading-tight mb-4">Les Esprits Ardents</h1>
+  <div class="my-3 ml-4 lg:ml-24 max-w-xl relative z-10 flex flex-col justify-center items-start h-4/6 text-start">
+    <h1 class="text-3xl font-bold leading-tight mb-4">Les Esprits Ardents</h1>
     <p class="font-semibold text-lg text-white mb-4">Dites Oui à la vie</p>
     <p class="font-semibold text-lg text-white mb-4">Faites peau neuve avec une session en massothérapie! Participez activement à votre équilibre!</p>
     <a href="https://site.booxi.com/marieclaudeormassotherapeute" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Prendre rendez-vous</a>

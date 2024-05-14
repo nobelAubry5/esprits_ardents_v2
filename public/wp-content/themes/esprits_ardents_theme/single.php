@@ -31,22 +31,26 @@ get_header();
 </nav>
 
 <span class="my-4 flex items-center">
-  <span class="pr-6 text-3xl font-extrabold font-sans"><?php the_title()?></span>
+  <span class="pr-6 text-2xl font-extrabold font-sans"><?php the_title()?></span>
   <span class="h-px flex-1 bg-black"></span>
 </span>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
   <div class="rounded-lg"><?php $image_info=get_field("image_du_produit");
                 if($image_info!=null){?>
-                    <picture>
+                    <picture class="flex justify-center items-center">
                         <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
                         <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
                         <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
                     </picture>
             <?php }?></div>
-  <div class="rounded-lg bg-gray-200 lg:col-span-2"><?php echo get_field("description_du_produit")?></div>
+  <div class="p-3 rounded-lg bg-gray-200 lg:col-span-2"><?php echo get_field("description_du_produit")?></div>
 </div>
-
+<div role="alert" class="my-8 rounded bg-green-100 border-s-4 border-green-500 bg-greeb-50 p-4">
+        <p class="mt-2 text-sm lg:text-base text-green-700">
+            Si vous souhaitez en savoir plus sur le produit ou vous le procurez vous pouvez m'appeler au 418-717-4166 ou m'écrire à l'adresse suivante: <a href="mailto:c2dragons@hotmail.com">c2dragons@hotmail.com</a>
+        </p>
+    </div>
 <span class="my-4 flex items-center">
   <span class="pr-6 text-2xl font-extrabold font-sans">Autres produits d'herboristerie</span>
   <span class="h-px flex-1 bg-black"></span>
