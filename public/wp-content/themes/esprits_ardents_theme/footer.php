@@ -17,13 +17,13 @@
             ));
             if (have_posts()) {
                 foreach ($posts as $post) { ?>
-                    <a href="#" class="block shrink-0">
+                    <div class="block shrink-0">
                         <img
                             alt=""
                             src="<?php echo get_template_directory_uri()?>/liaisons/images/marie-claude.webp"
                             class="size-14 rounded-lg object-cover"
                         />
-                    </a>
+                    </div>
                     <div>
                         <h3 class="font-bold text-white text-lg">
                             <a href="/esprits_ardents_v2/public/" class="hover:underline"> <?php echo get_field("nom_et_prenom");?> </a>

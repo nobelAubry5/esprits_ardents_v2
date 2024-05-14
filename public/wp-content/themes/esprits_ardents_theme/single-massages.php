@@ -36,17 +36,17 @@ echo "single-massages.php";
   <span class="h-px flex-1 bg-black"></span>
 </span>
 
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 bg-gray-200 rounded-md p-6">
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 bg-[#f8fafc] rounded-md p-6">
   <div class="rounded-lg"><?php 
   $image_info = get_field("image_massage");
   if($image_info != null) {?>
     <picture class="flex justify-center items-center">
       <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"];?>">
       <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"];?>">
-      <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
+      <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>" class="h-[225px]">
     </picture>
   <?php }?></div>
-  <div class="text-sm p-3 rounded-lg bg-gray-200 lg:col-span-2 lg:text-base"><?php echo get_field("description_massage") ?> </div>
+  <div class="text-sm p-3 rounded-lg bg-[#f8fafc] lg:col-span-2 lg:text-base"><?php echo get_field("description_massage") ?> </div>
 </div>
 
 <span class="my-4 flex items-center">
@@ -76,7 +76,7 @@ echo "single-massages.php";
                         <picture>
                             <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"]; ?>">
                             <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"]; ?>">
-                            <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" class="w-full object-cover rounded-md" alt="<?php echo $image_info["alt"]; ?>">
+                            <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" class="w-full h-[224px] object-cover rounded-md" alt="<?php echo $image_info["alt"]; ?>">
                         </picture>
                     <?php } ?>
 

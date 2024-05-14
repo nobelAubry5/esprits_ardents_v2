@@ -45,9 +45,9 @@ get_header(); // Appel de l'inclusion d'entête de page
                         </picture>
                     <?php } ?>
 
-                    <h3 class="mt-4 text-lg font-bold text-gray-900 sm:text-xl"><?php echo $post->post_title; ?></h3>
+                    <h3 class="mt-4 text-base font-bold text-gray-900 sm:text-xl"><?php echo $post->post_title; ?></h3>
 
-                    <p class="mt-2 max-w-sm text-gray-700">
+                    <p class="mt-2 max-w-sm text-gray-700 text-sm">
                         <?php the_excerpt(); ?>
                     </p>
                 </div>

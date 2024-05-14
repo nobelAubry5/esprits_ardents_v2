@@ -37,7 +37,7 @@ get_header(); //Appel de l'inclusion d'entête de page
                         <picture>
                             <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"]; ?>">
                             <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"]; ?>">
-                            <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" class="w-full object-cover rounded-md" alt="<?php echo $image_info["alt"]; ?>">
+                            <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" class="w-full h-[247px] object-cover rounded-md" alt="<?php echo $image_info["alt"]; ?>">
                         </picture>
                     <?php } ?>
 

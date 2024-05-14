@@ -44,7 +44,7 @@ get_header();
                         <img src="<?php echo $image_info['sizes']['thumbnail'];?>" alt="<?php echo $image_info["alt"];?>">
                     </picture>
             <?php }?></div>
-  <div class="p-3 rounded-lg bg-gray-200 lg:col-span-2"><?php echo get_field("description_du_produit")?></div>
+  <div class="p-3 rounded-lg bg-[#f8fafc] lg:col-span-2"><?php echo get_field("description_du_produit")?></div>
 </div>
 <div role="alert" class="my-8 rounded bg-green-100 border-s-4 border-green-500 bg-greeb-50 p-4">
         <p class="mt-2 text-sm lg:text-base text-green-700">
@@ -78,7 +78,7 @@ get_header();
                         <picture>
                             <source media="(min-width: 800px)" srcset="<?php echo $image_info['sizes']["large"]; ?>">
                             <source media="(min-width: 601px)" srcset="<?php echo $image_info['sizes']["medium"]; ?>">
-                            <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" class="w-full object-cover rounded-md" alt="<?php echo $image_info["alt"]; ?>">
+                            <img src="<?php echo $image_info['sizes']['thumbnail']; ?>" class="w-full h-[247px] object-cover rounded-md" alt="<?php echo $image_info["alt"]; ?>">
                         </picture>
                     <?php } ?>
 

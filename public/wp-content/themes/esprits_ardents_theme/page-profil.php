@@ -6,7 +6,7 @@ echo "page-profil.php";
 <main class="mx-auto max-w-xs md:max-w-lg lg:max-w-5xl xl:max-w-6xl">
     <div class="bg-[#e3ffd7] p-3 lg:px-12 grid lg:grid-rows-2 lg:grid-flow-col gap-4 rounded-md">
         <div class="flex justify-center items-center lg:justify-end lg:items-center row-span-3">
-            <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marie-claude.webp" class="w-36 h-36 lg:w-64 lg:h-64 rounded-full"/>
+            <img src="<?php echo get_template_directory_uri()?>/liaisons/images/marie-claude.webp" class="w-36 h-36 lg:w-64 lg:h-64 rounded-full" alt="Marie-Claude L'Or"/>
         </div> 
         <?php
         // Requête et boucle d'affichage des articles avec ACF
@@ -62,7 +62,7 @@ echo "page-profil.php";
                 ));
                 if (have_posts()) {
                     foreach ($posts as $post) { ?>
-                        <div class="border border-indigo-600 mt-4 p-4 leading-relaxed font-semibold text-base">
+                        <div class="border border-[#1C8554] mt-4 p-4 leading-relaxed font-semibold text-base">
                             <?php echo get_field("nom_formateur");?>
                             <?php echo get_field("nom_formation");?>
                         </div>
@@ -119,13 +119,7 @@ echo "page-profil.php";
     if (have_posts()) {
         foreach ($posts as $post) { ?>
             <article class="flex bg-white transition">
-                <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-                    <time datetime="2022-10-10" class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900">
-                        <span>2022</span>
-                        <span class="w-px flex-1 bg-gray-900/10"></span>
-                        <span>Oct 10</span>
-                    </time>
-                </div>
+                
                 <div class="hidden sm:block sm:basis-56">
                     <img alt="" src="https://placehold.co/225x225" class="aspect-square h-full w-full object-cover"/>
                 </div>
